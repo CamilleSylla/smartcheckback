@@ -4,14 +4,12 @@ const cors = require("cors");
 
 const io = require("socket.io")(server, {
 	cors: {
-		origin: "https://smartcheckfront.netlify.app/",
+		origin: "https://smartcheckfront.netlify.app",
 		methods: [ "GET", "POST" ]
 	}
 });
 
-app.use(cors({
-    origin: '*'
-}));
+app.use(cors());
 
 const PORT = process.env.PORT || 5000;
 
