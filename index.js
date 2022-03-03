@@ -8,16 +8,6 @@ const io = require("socket.io")(server, {
     cors : {
         origin: ["*"],
         methods: ["GET", "POST"],
-        handlePreflighRequest : (req, res) => {
-            res.writeHead(200, {
-                "Access-Control-Allow-Origin": "*",
-                "Access-Control-Allow-Methods": "GET,POST",
-                "Access-Control-Allow-Headers": "my-custom-headers",
-                "Acces-Control-Allow-Credentials": true
-
-            })
-            res.end()
-        }
     }
 })
 
