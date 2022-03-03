@@ -9,7 +9,9 @@ const io = require("socket.io")(server, {
 	}
 });
 
-app.use(cors());
+app.use(cors({
+    origin: '*'
+}));
 
 const PORT = process.env.PORT || 5000;
 
